@@ -1,0 +1,39 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+menu.cpu=Processor
+
+##############################################################
+# Generic Arduino Dock
+# For R1, R2 models
+
+arduinodock.name=Onion Arduino Dock
+arduinodock.upload.via_ssh=true
+
+arduinodock.vid.0=0x2341
+arduinodock.pid.0=0x0043
+arduinodock.vid.1=0x2341
+arduinodock.pid.1=0x0001
+arduinodock.vid.2=0x2A03
+arduinodock.pid.2=0x0043
+arduinodock.vid.3=0x2341
+arduinodock.pid.3=0x0243
+
+arduinodock.upload.tool=arduino:avrdude
+arduinodock.upload.protocol=arduino
+arduinodock.upload.maximum_size=32256
+arduinodock.upload.maximum_data_size=2048
+arduinodock.upload.speed=115200
+
+arduinodock.bootloader.tool=arduino:avrdude
+arduinodock.bootloader.low_fuses=0xFF
+arduinodock.bootloader.high_fuses=0xDE
+arduinodock.bootloader.extended_fuses=0x05
+arduinodock.bootloader.unlock_bits=0x3F
+arduinodock.bootloader.lock_bits=0x0F
+arduinodock.bootloader.file=optiboot/optiboot_atmega328.hex
+
+arduinodock.build.mcu=atmega328p
+arduinodock.build.f_cpu=16000000L
+arduinodock.build.board=AVR_UNO
+arduinodock.build.core=arduino:arduino
+arduinodock.build.variant=arduino:standard
